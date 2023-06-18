@@ -10,7 +10,9 @@ import streamlit as st
 import pandas as pd
 
 st.write("""
-# 舌尖上的中国:flag-cn:之闽清三宝:sparkles:
+# 闽清县志:computer:
+##### 感谢访问！
+##### 借助互联网，一起来了解更加丰满立体的我的家乡——闽清县吧！
 ##### 介绍人：许若橦:monkey:
 \n
 ***
@@ -38,7 +40,7 @@ attr = 'arcgisonline全球影像'
 
 #
 import geopandas as gpd
-url = "https://ruotongxu.github.io/streamlit.github.io/minqing.geojson“
+url = "https://ruotongxu.github.io/streamlit.github.io/minqing.geojson"
 gdf = gpd.read_file(url, driver='GeoJSON')
 
 m = folium.Map(width=800, height=600,tiles=tiles,attr=attr,
