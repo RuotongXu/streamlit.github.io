@@ -25,7 +25,10 @@ text = """
 
 st.markdown(text)
 
+from PIL import Image
 
+image1 = Image.open(r'https://github.com/RuotongXu/streamlit.github.io/edit/main/webgis/橄榄（青')
+st.image(image1)
 
 text = """
 ### 橄榄
