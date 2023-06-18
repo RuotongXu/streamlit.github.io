@@ -38,7 +38,7 @@ attr = 'arcgisonline全球影像'
 
 #
 import geopandas as gpd
-url = "../闽清.geojson"
+url = "https://github.com/RuotongXu/streamlit.github.io/blob/ChinaCounty/闽清.geojson"
 gdf = gpd.read_file(url, driver='GeoJSON')
 
 m = folium.Map(width=800, height=600,tiles=tiles,attr=attr,
