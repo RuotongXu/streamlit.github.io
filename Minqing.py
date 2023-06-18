@@ -38,7 +38,7 @@ attr = 'arcgisonline全球影像'
 
 #
 import geopandas as gpd
-url = "https://github.com/RuotongXu/streamlit.github.io/blob/ChinaCounty/闽清.geojson"
+url = "https://ruotongxu.github.io/streamlit.github.io/minqing.geojson“
 gdf = gpd.read_file(url, driver='GeoJSON')
 
 m = folium.Map(width=800, height=600,tiles=tiles,attr=attr,
@@ -73,11 +73,12 @@ output = st_folium(m, width=800, height=600)
 # ,opacity=0.6
 from PIL import Image
 
+'''
 image1 = Image.open(r'/Users/rt/Downloads/橄榄（青.jpg')
 #image2 = Image.open(r'C:\data\photos\p2.jpg')
 #image3 = Image.open(r'C:\data\photos\p3.jpg')
 st.image(image1)
-
+'''
 
 text = """
 ### 橄榄
