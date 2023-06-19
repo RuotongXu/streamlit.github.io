@@ -144,8 +144,6 @@ text = """
 
 st.markdown(text)
 
-import streamlit as st
-import geopandas as gpd
 import pandas as pd
 
 
@@ -154,14 +152,10 @@ st.write("""
 """
 )
 
-url_data = r"https://ruotongxu.github.io/streamlit.github.io/minqing.geojson"
-gdf = gpd.read_file(url_data)
-lat = []
-lon = []
-for i in range(len(gdf)):
-    # 在地图上添加Marker对象
-    lat.append(gdf['geometry'][i].y)
-    lon.append(gdf['geometry'][i].x)
+
+lat = [26.091321632191132,26.074631746703883,26.277408212953834,26.16990166108953 ]
+lon = [118.7725067138675,118.7741804122925,118.71843338012697,118.83771657943727 ]
+
 df = pd.DataFrame()
 df["lon"] = lon
 df["lat"] = lat
