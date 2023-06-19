@@ -71,7 +71,7 @@ col2.image(image, width = 200,caption='青橄榄')
 url = f"https://ruotongxu.github.io/streamlit.github.io/photos/yanganlan.jpg"
 response = requests.get(url)
 image = response.content   
-col3.image(image, width = 400,caption='腌制橄榄')
+col3.image(image, width = 200,caption='腌制橄榄')
 
 
 
