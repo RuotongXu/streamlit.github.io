@@ -163,7 +163,7 @@ df["lat"] = lat
 st.map(df)
 
 
-
+st.button(':heart:Like:heart:')
 
 
 
