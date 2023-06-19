@@ -42,6 +42,18 @@ st.pydeck_chart(pdk.Deck(
             get_radius=50000)],
 ))
 
+from streamlit_keplergl import keplergl_static
+from keplergl import KeplerGl
+import geopandas as gpd
+#url = "https://ecnugischaser.github.io/gis_development/data/tms_POIs.geojson"
+data = r'https://ecnugischaser.github.io/gis_development/data/tms_POIs.geojson'
+st.write(data)
+gdf = gpd.read_file(data)
+config ={'version': 'v1',
+         'config': {'mapStyle':{'styleType':'satellite'}}}
+map_1 = KeplerGl(height=400,config=config)
+map_1.add_data(gdf, 'china cities')
+keplergl_static(map_1,center_map=True)
 
 import folium
 import streamlit as st
