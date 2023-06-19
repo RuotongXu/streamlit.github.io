@@ -67,7 +67,7 @@ col2, col3 = st.columns(2)
 url = f"https://ruotongxu.github.io/streamlit.github.io/photos/qingganlan.jpg"
 response = requests.get(url)
 image = response.content   
-col2.image(image, width = 400,caption='青橄榄')
+col2.image(image, width = 200,caption='青橄榄')
 url = f"https://ruotongxu.github.io/streamlit.github.io/photos/yanganlan.jpg"
 response = requests.get(url)
 image = response.content   
@@ -97,7 +97,7 @@ text = """
 """
 
 st.markdown(text)
-url = f"https://ruotongxu.github.io/streamlit.github.io/photos/粉干.jpg"
+url = f"https://ruotongxu.github.io/streamlit.github.io/photos/fengan.jpg"
 response = requests.get(url)
 image = response.content   
 st.image(image, width = 200,caption='粉干（生）')
