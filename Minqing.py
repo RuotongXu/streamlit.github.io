@@ -144,28 +144,29 @@ text = """
 
 st.markdown(text)
 
-
-from streamlit_keplergl import keplergl_static
-from keplergl import KeplerGl
+import streamlit as st
 import geopandas as gpd
-data = r'https://ruotongxu.github.io/streamlit.github.io/minqing.geojson'
-gdf = gpd.read_file(data)
-config ={'version': 'v2',
-         'config': {
-                    'legend':{'show': True, 'type': 'gradient'},
-                    'mapState': {'latitude': 26.23273201141355,
-                                 'longitude': 118.73807846069200,
-                                 'zoom': 10}
-                    }}
-#'mapStyle': {'styleType':'satellite'},
-map_1 = KeplerGl(height=800,config=config)
-map_1.add_data(gdf, '介绍中提到的地点')
+import pandas as pd
 
 
+st.write("""
+###### 介绍中提到的部分地点
+"""
+)
 
+url_data = r"https://ruotongxu.github.io/streamlit.github.io/minqing.geojson"
+gdf = gpd.read_file(url_data)
+lat = []
+lon = []
+for i in range(len(gdf)):
+    # 在地图上添加Marker对象
+    lat.append(gdf['geometry'][i].y)
+    lon.append(gdf['geometry'][i].x)
+df = pd.DataFrame()
+df["lon"] = lon
+df["lat"] = lat
+st.map(df)
 
-map_1.config = config
-keplergl_static(map_1,center_map=True)
 
 
 
