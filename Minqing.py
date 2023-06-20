@@ -172,6 +172,12 @@ st.button(':heart:Like:heart:')
 
 
 
+if st.button('Like'):
+    st.write('Thank you for liking!')
+    st.balloons()
+else:
+    st.write('Click the button to like')
+
 
 
 
