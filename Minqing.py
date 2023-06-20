@@ -168,11 +168,11 @@ st.write("""
 ***
 感谢您的阅读！
 """)
-st.button(':heart:Like:heart:')
 
 
 
-if st.button('Like'):
+
+if st.button(':heart:Like:heart:'):
     st.write('Thank you for liking!')
     st.balloons()
 else:
